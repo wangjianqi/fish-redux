@@ -1,6 +1,7 @@
 import 'package:fish_redux/fish_redux.dart';
 
 class ReportState implements Cloneable<ReportState> {
+  ///状态
   int total;
   int done;
 

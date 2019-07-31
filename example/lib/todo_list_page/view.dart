@@ -4,6 +4,7 @@ import 'package:flutter/material.dart' hide Action;
 import 'action.dart';
 import 'state.dart';
 
+///todoList页面
 Widget buildView(PageState state, Dispatch dispatch, ViewService viewService) {
   final ListAdapter adapter = viewService.buildAdapter();
   return Scaffold(

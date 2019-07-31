@@ -13,6 +13,7 @@ Effect<PageState> buildEffect() {
   });
 }
 
+///初始数据
 void _init(Action action, Context<PageState> ctx) {
   final List<ToDoState> initToDos = <ToDoState>[
     ToDoState(

@@ -5,6 +5,7 @@ import 'view.dart';
 
 export 'state.dart';
 
+///todoList的header组件
 class ReportComponent extends Component<ReportState> {
   ReportComponent()
       : super(
