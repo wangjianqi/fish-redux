@@ -13,6 +13,7 @@ import 'todo_component/component.dart';
 ///默认情况effect会在reducer之前被执行
 ///当前effect返回 true 的时候，就会停止后续的effect和reducer的操作
 ///当前effect返回 false 的时候，后续effect和reducer继续执行
+
 Effect<PageState> buildEffect() {
   return combineEffects(<Object, Effect<PageState>>{
     Lifecycle.initState: _init,
@@ -20,7 +21,7 @@ Effect<PageState> buildEffect() {
   });
 }
 
-///初始数据
+///初始话数据
 void _init(Action action, Context<PageState> ctx) {
   final List<ToDoState> initToDos = <ToDoState>[
     ToDoState(
@@ -57,3 +58,26 @@ void _onAdd(Action action, Context<PageState> ctx) {
     }
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

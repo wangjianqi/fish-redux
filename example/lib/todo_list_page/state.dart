@@ -6,6 +6,7 @@ import 'report_component/component.dart';
 import 'todo_component/component.dart';
 
 class PageState implements GlobalBaseState, Cloneable<PageState> {
+  ///数据源
   List<ToDoState> toDos;
 
   ///主题颜色
@@ -27,6 +28,7 @@ PageState initState(Map<String, dynamic> args) {
 }
 
 class ReportConnector extends Reselect2<PageState, ReportState, int, int> {
+  ///计算的
   @override
   ReportState computed(int sub0, int sub1) {
     return ReportState()

@@ -12,6 +12,7 @@ class GlobalState implements GlobalBaseState, Cloneable<GlobalState> {
   @override
   Color themeColor;
 
+  ///实现Cloneable
   @override
   GlobalState clone() {
     return GlobalState();

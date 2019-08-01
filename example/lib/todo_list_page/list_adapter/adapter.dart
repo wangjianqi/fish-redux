@@ -4,10 +4,14 @@ import '../state.dart';
 import '../todo_component/component.dart';
 import 'reducer.dart';
 
+///adapter:
+///DynamicFlowAdapter:
+///模板是一个map，接收一个数组类型的数据驱动
 class ToDoListAdapter extends DynamicFlowAdapter<PageState> {
   ToDoListAdapter()
       : super(
           pool: <String, Component<Object>>{
+            ///cell
             'toDo': ToDoComponent(),
           },
           connector: _ToDoListConnector(),
@@ -41,3 +45,24 @@ class _ToDoListConnector extends ConnOp<PageState, List<ItemBean>> {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

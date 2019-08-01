@@ -11,6 +11,7 @@ Widget buildView(
 ) {
   return Container(
     padding: const EdgeInsets.all(8.0),
+    ///长按手势
     child: GestureDetector(
       child: Column(
         children: <Widget>[
