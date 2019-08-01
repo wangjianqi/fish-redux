@@ -28,17 +28,18 @@ Widget createApp() {
         /// 2. 参数2 当 AppStore.state 变化时, PageStore.state 该如何变化
         page.connectExtraStore<GlobalState>(
           GlobalStore.store,
-          (Object pagestate, GlobalState appState) {
-            final GlobalBaseState p = pagestate;
+          (Object pageState, GlobalState appState) {
+            final GlobalBaseState p = pageState;
             if (p.themeColor != appState.themeColor) {
-              if (pagestate is Cloneable) {
-                final Object copy = pagestate.clone();
+              if (pageState is Cloneable) {
+                final Object copy = pageState.clone();
                 final GlobalBaseState newState = copy;
                 newState.themeColor = appState.themeColor;
+                ///返回新的状态
                 return newState;
               }
             }
-            return pagestate;
+            return pageState;
           },
         );
       }

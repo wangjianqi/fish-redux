@@ -6,6 +6,13 @@ import 'list_adapter/action.dart' as list_action;
 import 'state.dart';
 import 'todo_component/component.dart';
 
+
+///Effect处理Action的副作用
+///用法和reducer差不多，作用完全不同
+///异步请求
+///默认情况effect会在reducer之前被执行
+///当前effect返回 true 的时候，就会停止后续的effect和reducer的操作
+///当前effect返回 false 的时候，后续effect和reducer继续执行
 Effect<PageState> buildEffect() {
   return combineEffects(<Object, Effect<PageState>>{
     Lifecycle.initState: _init,
@@ -39,6 +46,7 @@ void _init(Action action, Context<PageState> ctx) {
   ctx.dispatch(PageActionCreator.initToDosAction(initToDos));
 }
 
+///effect接受处理的action以on命名
 void _onAdd(Action action, Context<PageState> ctx) {
   Navigator.of(ctx.context)
       .pushNamed('todo_edit', arguments: null)

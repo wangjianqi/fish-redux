@@ -5,7 +5,12 @@ import 'action.dart';
 import 'state.dart';
 
 ///todoList页面
+///事件和回调通过dispatch发出意图
 Widget buildView(PageState state, Dispatch dispatch, ViewService viewService) {
+  ///viewService：三个能力
+  ///获取build-context
+  ///buildView创建子组件
+  ///buildAdapter创建适配器
   final ListAdapter adapter = viewService.buildAdapter();
   return Scaffold(
     appBar: AppBar(

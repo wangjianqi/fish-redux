@@ -8,7 +8,12 @@ import 'state.dart';
 
 import 'view.dart';
 
-///page页面
+///todoList page页面
+///page:
+///一个页面内有且仅有一个store
+///Page 继承于 Component，所以它能配置所有 Component 的要素
+///Page 能配置 Middleware，用于对 Redux 做 AOP 管理
+///Page 必须配置一个初始化页面数据的初始化函数  initState
 class ToDoListPage extends Page<PageState, Map<String, dynamic>> {
   ToDoListPage()
       : super(

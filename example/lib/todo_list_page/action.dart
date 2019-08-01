@@ -3,8 +3,10 @@ import 'todo_component/component.dart';
 
 enum PageAction { initToDos, onAdd }
 
+///ActionCreator
 class PageActionCreator {
   static Action initToDosAction(List<ToDoState> toDos) {
+    ///action包含type和payload
     return Action(PageAction.initToDos, payload: toDos);
   }
 

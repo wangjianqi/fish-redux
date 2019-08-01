@@ -15,7 +15,10 @@ class ToDoListAdapter extends DynamicFlowAdapter<PageState> {
         );
 }
 
+///它表达了如何从一个大数据中读取小数据，同时对小数据的修改如何同步给大数据，这样的数据连接关系
+///connector
 class _ToDoListConnector extends ConnOp<PageState, List<ItemBean>> {
+  ///get
   @override
   List<ItemBean> get(PageState state) {
     if (state.toDos?.isNotEmpty == true) {
@@ -27,6 +30,7 @@ class _ToDoListConnector extends ConnOp<PageState, List<ItemBean>> {
     }
   }
 
+  ///set
   @override
   void set(PageState state, List<ItemBean> toDos) {
     if (toDos?.isNotEmpty == true) {
