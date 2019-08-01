@@ -4,6 +4,7 @@ import 'todo_component/component.dart';
 enum PageAction { initToDos, onAdd }
 
 ///ActionCreator
+///当前页面有两个事件：初始化和添加
 class PageActionCreator {
   static Action initToDosAction(List<ToDoState> toDos) {
     ///action包含type和payload

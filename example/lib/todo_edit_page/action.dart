@@ -13,10 +13,12 @@ class ToDoEditActionCreator {
     );
   }
 
+  ///完成
   static Action onDone() {
     return const Action(ToDoEditAction.onDone);
   }
 
+  ///改变主题
   static Action onChangeTheme() {
     return const Action(ToDoEditAction.onChangeTheme);
   }

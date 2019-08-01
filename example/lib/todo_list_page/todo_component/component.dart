@@ -7,6 +7,7 @@ import 'view.dart';
 
 export 'state.dart';
 
+///组件
 class ToDoComponent extends Component<ToDoState> {
   ToDoComponent()
       : super(

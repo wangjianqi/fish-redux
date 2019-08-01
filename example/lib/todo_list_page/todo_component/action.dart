@@ -23,6 +23,7 @@ class ToDoActionCreator {
     return Action(ToDoAction.onRemove, payload: uniqueId);
   }
 
+  ///执行删除
   static Action removeAction(String uniqueId) {
     return Action(ToDoAction.remove, payload: uniqueId);
   }

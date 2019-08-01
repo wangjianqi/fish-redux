@@ -49,6 +49,7 @@ Widget buildView(
                   style: TextStyle(fontSize: 18),
                   overflow: TextOverflow.ellipsis),
               onPressed: () {
+                ///改变主题
                 dispatch(ToDoEditActionCreator.onChangeTheme());
               }),
           Expanded(
