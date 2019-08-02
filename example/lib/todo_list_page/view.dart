@@ -20,6 +20,7 @@ Widget buildView(PageState state, Dispatch dispatch, ViewService viewService) {
     body: Container(
       child: Column(
         children: <Widget>[
+          ///component：在这里显示
           viewService.buildComponent('report'),
           Expanded(
               child: ListView.builder(

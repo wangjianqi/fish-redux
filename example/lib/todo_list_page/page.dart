@@ -22,12 +22,19 @@ class ToDoListPage extends Page<PageState, Map<String, dynamic>> {
           reducer: buildReducer(),
           ///listView
           view: buildView,
+          ///dependencies是表达组件之间依赖关系的结构
+    ///接收两个字段：slots和adapter
+    ///slots组件依赖的插槽
+    ///adapter：组件依赖的具体适配器（用来构建高性能的ListView）
+    ///Dependent 是 subComponent | subAdapter + connector 的组合
+    ///一个 组件的 Reducer 由 Component 自身配置的 Reducer 和它的 Dependencies 下的所有子 Reducers 自动复合而成。
+    ///dependent：Dependent = connector<T, P> + subComponent | subAdapter 的组合，它表达了小组件|小适配器是如何连接到 Component 的。
           dependencies: Dependencies<PageState>(
               adapter: NoneConn<PageState>() + ToDoListAdapter(),
               ///插槽
               slots: <String, Dependent<PageState>>{
                 ///
-                'report': ReportConnector() + ReportComponent()
+                'report': ReportConnector() + ReportComponent(),
               }),
 
           /// 页面私有AOP, 如果需要
