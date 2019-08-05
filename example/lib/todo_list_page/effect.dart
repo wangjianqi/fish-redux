@@ -10,7 +10,9 @@ import 'todo_component/component.dart';
 ///Effect处理Action的副作用
 ///用法和reducer差不多，作用完全不同
 ///异步请求
-///默认情况effect会在reducer之前被执行
+///
+///注意：================默认情况effect会在reducer之前被执行================
+///
 ///当前effect返回 true 的时候，就会停止后续的effect和reducer的操作
 ///当前effect返回 false 的时候，后续effect和reducer继续执行
 ///

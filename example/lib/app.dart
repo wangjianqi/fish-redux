@@ -77,8 +77,10 @@ Widget createApp() {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
+    ///通过routes创建Widget
     home: routes.buildPage('todo_list', null),
     onGenerateRoute: (RouteSettings settings) {
+      ///传参
       return MaterialPageRoute<Object>(builder: (BuildContext context) {
         return routes.buildPage(settings.name, settings.arguments);
       });

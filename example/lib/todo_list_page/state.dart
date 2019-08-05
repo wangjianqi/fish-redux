@@ -27,6 +27,10 @@ PageState initState(Map<String, dynamic> args) {
   return PageState();
 }
 
+///combineReducers 是一个将 Reducer 分治的函数，让一个庞大数据的 Reducer 可以由多层的更小的 Reducer 组合而成
+///connector
+///state的clone的能力
+///get&set的能力，即为connector的概念
 class ReportConnector extends Reselect2<PageState, ReportState, int, int> {
   ///计算的
   @override
@@ -36,6 +40,8 @@ class ReportConnector extends Reselect2<PageState, ReportState, int, int> {
       ..total = sub1;
   }
 
+  ///report_component的数据是从这里绑定获取的
+  ///注意get方法
   @override
   int getSub0(PageState state) {
     return state.toDos.where((ToDoState tds) => tds.isDone).toList().length;

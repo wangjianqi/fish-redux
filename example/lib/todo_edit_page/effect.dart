@@ -15,6 +15,7 @@ Effect<TodoEditState> buildEffect() {
   });
 }
 
+///在生命周期中是initState
 void _init(Action action, Context<TodoEditState> ctx) {
   ctx.state.nameEditController.addListener(() {
     ctx.dispatch(
@@ -27,6 +28,8 @@ void _init(Action action, Context<TodoEditState> ctx) {
   });
 }
 
+
+///在这里执行一些跳转逻辑
 void _onDone(Action action, Context<TodoEditState> ctx) {
   Navigator.of(ctx.context).pop<ToDoState>(ctx.state.toDo);
 }

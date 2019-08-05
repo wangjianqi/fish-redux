@@ -16,6 +16,7 @@ class TodoEditState implements GlobalBaseState, Cloneable<TodoEditState> {
   @override
   Color themeColor;
 
+  ///这里是clone
   @override
   TodoEditState clone() {
     return TodoEditState()
@@ -28,6 +29,9 @@ class TodoEditState implements GlobalBaseState, Cloneable<TodoEditState> {
   }
 }
 
+
+///TextEditingController相关的等需要在这里初始化
+///ToDoState：传过来的数据
 TodoEditState initState(ToDoState arg) {
   final TodoEditState state = TodoEditState();
   state.toDo = arg?.clone() ?? ToDoState();

@@ -3,8 +3,10 @@ import 'package:fish_redux/fish_redux.dart';
 import '../state.dart';
 import '../todo_component/component.dart';
 import 'reducer.dart';
-
 ///adapter:
+///ListView
+///adapter和component几乎是一致的
+///Adapter:生成一个ListAdapter，ListAdapter有能力生成一组Widget
 ///DynamicFlowAdapter:
 ///模板是一个map，接收一个数组类型的数据驱动
 class ToDoListAdapter extends DynamicFlowAdapter<PageState> {
@@ -45,7 +47,6 @@ class _ToDoListConnector extends ConnOp<PageState, List<ItemBean>> {
     }
   }
 }
-
 
 
 

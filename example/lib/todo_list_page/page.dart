@@ -8,7 +8,7 @@ import 'state.dart';
 
 import 'view.dart';
 
-///todoList page页面
+///todoList:page页面
 ///page:
 ///一个页面内有且仅有一个store
 ///Page 继承于 Component，所以它能配置所有 Component 的要素
@@ -17,10 +17,11 @@ import 'view.dart';
 class ToDoListPage extends Page<PageState, Map<String, dynamic>> {
   ToDoListPage()
       : super(
+          ///initState：必须的:就是一个带有参数的函数
           initState: initState,
           effect: buildEffect(),
           reducer: buildReducer(),
-          ///listView
+          ///view:必须的:函数
           view: buildView,
           ///dependencies是表达组件之间依赖关系的结构
     ///接收两个字段：slots和adapter
