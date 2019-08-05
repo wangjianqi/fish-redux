@@ -18,6 +18,7 @@ Reducer<PageState> buildReducer() {
 ///接收一个意图，做出数据修改
 ///如果数据修改了，它会自动触发 State 的层层数据的拷贝，再以扁平化方式通知组件刷新。
 PageState _initToDosReducer(PageState state, Action action) {
+  ///通过Action的payload接收参数
   final List<ToDoState> toDos = action.payload ?? <ToDoState>[];
   ///如果要修改数据，需要创建一份新的拷贝，修改在拷贝上
   final PageState newState = state.clone();

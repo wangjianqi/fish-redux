@@ -14,6 +14,7 @@ Widget buildView(PageState state, Dispatch dispatch, ViewService viewService) {
   final ListAdapter adapter = viewService.buildAdapter();
   return Scaffold(
     appBar: AppBar(
+      ///使用主题色
       backgroundColor: state.themeColor,
       title: const Text('ToDoList'),
     ),

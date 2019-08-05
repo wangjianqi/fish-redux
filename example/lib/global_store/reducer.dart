@@ -24,5 +24,6 @@ List<Color> _colors = <Color>[
 GlobalState _onchangeThemeColor(GlobalState state, Action action) {
   final Color next =
       _colors[((_colors.indexOf(state.themeColor) + 1) % _colors.length)];
+  ///需要使用clone
   return state.clone()..themeColor = next;
 }

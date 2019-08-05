@@ -6,6 +6,7 @@ class ToDoEditActionCreator {
   static Action update(String name, String desc) {
     return Action(
       ToDoEditAction.update,
+      ///通过map来传参
       payload: <String, String>{
         'name': name,
         'desc': desc,
