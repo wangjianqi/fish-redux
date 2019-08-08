@@ -1,7 +1,10 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'todo_component/component.dart';
 
-enum PageAction { initToDos, onAdd }
+enum PageAction {
+  ///初始化数据
+  initToDos,
+  onAdd }
 
 ///ActionCreator
 ///当前页面有两个事件：初始化和添加
