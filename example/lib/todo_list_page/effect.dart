@@ -64,6 +64,7 @@ void _onAdd(Action action, Context<PageState> ctx) {
       .then((dynamic toDo) {
     if (toDo != null &&
         (toDo.title?.isNotEmpty == true || toDo.desc?.isNotEmpty == true)) {
+      ///调用adapter的action
       ctx.dispatch(list_action.ToDoListActionCreator.add(toDo));
     }
   });

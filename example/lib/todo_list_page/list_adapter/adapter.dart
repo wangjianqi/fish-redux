@@ -17,6 +17,7 @@ class ToDoListAdapter extends DynamicFlowAdapter<PageState> {
             'toDo': ToDoComponent(),
           },
           connector: _ToDoListConnector(),
+          ///adapter的reducer
           reducer: buildReducer(),
         );
 }
@@ -39,10 +40,12 @@ class _ToDoListConnector extends ConnOp<PageState, List<ItemBean>> {
   ///set
   @override
   void set(PageState state, List<ItemBean> toDos) {
+    ///完成：子组件修改page
     if (toDos?.isNotEmpty == true) {
       state.toDos = List<ToDoState>.from(
           toDos.map<ToDoState>((ItemBean bean) => bean.data).toList());
     } else {
+      ///空的情况
       state.toDos = <ToDoState>[];
     }
   }

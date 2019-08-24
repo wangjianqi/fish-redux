@@ -22,7 +22,7 @@ Widget buildView(
           Text(
             'Total ${state.total} tasks, ${state.done} done.',
             style: const TextStyle(fontSize: 18.0, color: Colors.white),
-          )
+          ),
         ],
       ));
 }

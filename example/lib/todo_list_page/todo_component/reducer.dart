@@ -20,9 +20,11 @@ ToDoState _edit(ToDoState state, Action action) {
   return state;
 }
 
+///完成：选中
 ToDoState _markDone(ToDoState state, Action action) {
   final String uniqueId = action.payload;
   if (state.uniqueId == uniqueId) {
+    ///修改数据
     return state.clone()..isDone = !state.isDone;
   }
   return state;

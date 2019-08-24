@@ -26,7 +26,7 @@ void _onEdit(Action action, Context<ToDoState> ctx) {
   }
 }
 
-///删除弹框
+///长按删除弹框
 void _onRemove(Action action, Context<ToDoState> ctx) async {
   final String select = await showDialog<String>(
       context: ctx.context,

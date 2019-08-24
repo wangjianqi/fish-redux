@@ -6,7 +6,7 @@ import 'report_component/component.dart';
 import 'todo_component/component.dart';
 
 class PageState implements GlobalBaseState, Cloneable<PageState> {
-  ///数据源
+  ///子组件的state
   List<ToDoState> toDos;
 
   ///主题颜色
@@ -44,16 +44,18 @@ class ReportConnector extends Reselect2<PageState, ReportState, int, int> {
   ///注意get方法
   @override
   int getSub0(PageState state) {
+    ///已经完成的数量
     return state.toDos.where((ToDoState tds) => tds.isDone).toList().length;
   }
 
   @override
   int getSub1(PageState state) {
+    ///总共任务数量
     return state.toDos.length;
   }
 
   @override
   void set(PageState state, ReportState subState) {
-    throw Exception('Unexcepted to set PageState from ReportState');
+//    throw Exception('Unexcepted to set PageState from ReportState');
   }
 }
